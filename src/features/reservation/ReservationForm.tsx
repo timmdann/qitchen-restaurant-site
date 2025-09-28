@@ -173,6 +173,7 @@ export default function ReservationForm() {
 
           <div>
             <input
+              placeholder="Date"
               type="date"
               min={todayISO()}
               value={data.date}
@@ -187,6 +188,7 @@ export default function ReservationForm() {
 
           <div>
             <input
+              placeholder="Time"
               type="time"
               value={data.time}
               onChange={(e) => set("time", e.target.value)}
