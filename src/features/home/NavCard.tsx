@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import ArrowButton from "../../ui/ArrowButton";
 
 function NavCard({
@@ -12,8 +13,8 @@ function NavCard({
   size: string;
 }) {
   return (
-    <a
-      href={to}
+    <Link
+      to={to}
       className="
         group relative block overflow-hidden rounded-2xl
         h-48 md:h-44
@@ -45,7 +46,7 @@ function NavCard({
           </div>
         </div>
       </div>
-    </a>
+    </Link>
   );
 }
 export default NavCard;
