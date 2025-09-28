@@ -1,73 +1,54 @@
-# React + TypeScript + Vite
+# 🍣 Qitchen — Restaurant Website (React + Vite + Tailwind)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern restaurant website with smooth animations, responsive layout, and a blog.
+Optimized for portfolio use and ready for production deployment.
+Live demo 👉 [qitchen-restaurant-site.vercel.app](https://qitchen-restaurant-site.vercel.app/)
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## React Compiler
+- **Two-column layout** on desktop: large hero/visual on the left, content on the right
+- **Smooth page transitions** powered by framer-motion
+- **Lazy loading** with React.lazy + Suspense and custom Loader
+- **Scroll restore** between routes with a custom useScrollRestore
+- **Menu page** with categories and clean mobile layout
+- **Blog:** article list + detail page (/blog/:slug) with a hero banner
+- **Reservation / Contact / About** pages included
+- **404 page** matching the site’s design
+- **Responsive Navbar**
+- **Performance optimized:** memoized values, Tailwind utility classes, minimal reflow
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠 Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- [React](https://reactjs.org/) + [Vite](https://vitejs.dev/) — fast frontend development
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/) — styling and responsive utilities
+- [React Router](https://reactrouter.com/) — client-side routing
+- [Framer Motion](https://motion.dev/) — animations and transitions
+- [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS), [HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML)
+- [Git](https://git-scm.com/) & [GitHub](https://github.com/) for version control
+- Deployment on [Vercel](https://vercel.com/)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🚀 Getting Started
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Clone the repository and run locally:
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+```bash
+# 1. Clone the repo
+git clone https://github.com/<username>/<repo>.git
+cd <repo>
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+# 2. Install dependencies
+npm install
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# 3. Start development server
+npm run dev
+
+Now the app should be running at
+👉 http://localhost:5173/
 ```
